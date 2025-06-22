@@ -23,11 +23,10 @@ jobs:
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v1
-
-  analyze:
-    name: Analyze
-    ...
-    strategy:
-      fail-fast: false
-      matrix:
-        language: ['python', 'javascript']
+        
+      - name: Analyze
+        ...
+        strategy:
+          fail-fast: false
+          matrix:
+            language: ['python', 'javascript']
